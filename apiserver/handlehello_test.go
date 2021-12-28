@@ -13,5 +13,5 @@ func TestAPIServer_HandleHello(t *testing.T) {
 	rec := httptest.NewRecorder()
 	req, _ := http.NewRequest("GET", "/", nil)
 	server.HandleHello().ServeHTTP(rec, req)
-	assert.Equal(t, rec.Body.String(), "Bye world")
+	assert.Equal(t, rec.Body.String(), "Hello world")
 }
